@@ -2,9 +2,10 @@ interface Props {
   characterName: string;
   title: string;
   image: string;
+  description: string;
 }
 
-function ProfileCard({ characterName, title, image }: Props) {
+function ProfileCard({ characterName, title, image, description }: Props) {
   return (
     <div className="card">
       <div className="card-image">
@@ -17,6 +18,7 @@ function ProfileCard({ characterName, title, image }: Props) {
           <p className="title is-4">{characterName}</p>
           <p className="subtitle is-6">{title}</p>
         </div>
+        <div className="content">{description}</div>
       </div>
     </div>
   );
